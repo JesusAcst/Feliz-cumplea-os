@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <!-- Música de fondo - Canción de cumpleaños en la primera interfaz -->
-      <audio id="birthday-music" src="audio/CUMPLEAÑOS FELIZ (lyrics)  Cumpleaños para niños  Feliz cumpleaños infantil  Canta y Baila.mp3" loop autoplay></audio>
+  <!-- Reproductor de audio -->
+  <audio id="birthday-song" autoplay loop>
+    <source src="audio/CUMPLEAÑOS FELIZ (lyrics)  Cumpleaños para niños  Feliz cumpleaños infantil  Canta y Baila.mp3" type="audio/mpeg">
+  </audio>
 
   <!-- Primera Interfaz -->
   <div id="intro" class="container-fluid d-flex align-items-center justify-content-center vh-100 text-center">
@@ -17,9 +19,6 @@
       <h1 class="display-4 animate__animated animate__fadeInDown"> 🎁¡Con mucho amor para ti mi bebé!🎉</h1>
       <p class="lead animate__animated animate__fadeInUp">Haz clic en el botón para abrir tu regalo 🎀</p>
       <button id="start-btn" class="btn btn-primary btn-lg mt-4">Abre tu regalo</button>
-          <!-- Música de fondo - Canción de cumpleaños en la primera interfaz -->
-    <audio id="birthday-music" src="audio/CUMPLEAÑOS FELIZ (lyrics)  Cumpleaños para niños  Feliz cumpleaños infantil  Canta y Baila.mp3" loop autoplay></audio>
-
     </div>
   </div>
 
@@ -30,7 +29,7 @@
       <button id="next-to-collage" class="btn btn-success">Siguiente</button>
     </div>
     <div class="envelope">
-    <div class="flap"></div>
+      <div class="flap"></div>
       <div class="letter">
         <h2>🎂 ¡Feliz cumpleaños, mi amor! 🎂</h2>
         <p>Eres la persona más especial en mi vida. Espero que este día esté lleno de amor y felicidad. 💖</p>
@@ -73,10 +72,6 @@
       </div>
     </div>
   </div>
-
-
-  
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
