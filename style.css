@@ -1,0 +1,138 @@
+/* General */
+body {
+  background-color: #e1636386;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #ff6b6b;
+}
+
+/* Primera Interfaz */
+#intro {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: rgb(255, 255, 255);
+}
+
+/* Sobre interactivo */
+.envelope {
+  position: relative; /* Necesario para las flores alrededor */
+  width: 800px; /* Aumentamos el tamaño del sobre */
+  height: 430px;
+  margin: 40px auto;
+  background: #ff6b6b;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animación de rotación */
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Flores decorativas */
+.flower {
+  position: absolute; /* Para posicionarlas alrededor del sobre */
+  width: 60px; /* Tamaño de las flores */
+  height: 60px;
+  animation: rotar 5s linear infinite; /* Rotación continua */
+  z-index: 1; /* Aseguramos que estén sobre el sobre */
+}
+
+/* Posiciones de las flores alrededor del sobre */
+.flower-1 {
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flower-2 {
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+}
+
+.flower-3 {
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flower-4 {
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+}
+
+.flower-5 {
+  top: -20px;
+  left: -20px;
+}
+
+.flower-6 {
+  bottom: -20px;
+  right: -20px;
+}
+
+/* Flap del sobre */
+.flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffcccc;
+  clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+  transition: transform 1s ease;
+}
+
+.envelope:hover .flap {
+  transform: rotateX(180deg);
+}
+
+/* Carta dentro del sobre */
+.letter {
+  position: center;
+  top: 100%;
+  left: 20;
+  width: 90%; /* Ajustamos el ancho de la carta */
+  height: 90%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transform: translateY(-105%);
+  transition: transform 1s ease 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope:hover .letter {
+  transform: translateY(0);
+}
+
+/* Collage */
+#collage {
+  margin-top: 40px;
+}
+
+.photo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
