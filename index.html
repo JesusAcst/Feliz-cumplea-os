@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body onclick="PlayAudio">
+<body onclick="PlayAudio()">
   <!-- Reproductor de audio -->
   <audio id="birthday-song" autoplay loop>
     <source src="audio/cumpleaños.mp3" type="audio/mpeg">
@@ -18,7 +18,7 @@
     <div>
       <h1 class="display-4 animate__animated animate__fadeInDown"> 🎁¡Con mucho amor para ti mi bebé!🎉</h1>
       <p class="lead animate__animated animate__fadeInUp">Haz clic en el botón para abrir tu regalo 🎀</p>
-      <button id="start-btn" class="btn btn-primary btn-lg mt-4">Abre tu regalo</button>
+      <button onclick="PlayAudio()" id="start-btn" class="btn btn-primary btn-lg mt-4">Abre tu regalo</button>
     </div>
   </div>
 
